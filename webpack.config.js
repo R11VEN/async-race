@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const EslingPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
-    entry: path.resolve(__dirname, 'rs-css/src/index.ts'),
+    entry: path.resolve(__dirname, 'Async Race/src/index.ts'),
 
     output: {
       filename: 'bundle.js',
@@ -34,7 +34,7 @@ module.exports = {
 
     plugins: [
       new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, 'rs-css/index.html'),
+        template: path.resolve(__dirname, 'Async Race/index.html'),
       }),
       new EslingPlugin({ extensions: 'ts' }),
     ],
