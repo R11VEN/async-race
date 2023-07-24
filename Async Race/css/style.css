@@ -1,0 +1,246 @@
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #222;
+    color: darkcyan;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.garage {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.page {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.page-number {
+    margin: 0;
+}
+
+.select-page,
+.page-switching,
+.buttons-block,
+.upgrade-car-block,
+.create-car-block,
+.garage-size {
+    display: flex;
+    gap: 10px;
+}
+
+.to-garage,
+.to-winers,
+.create,
+.upgrade,
+.race,
+.reset,
+.previous,
+.next,
+.select,
+.remove {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.to-garage:hover,
+.to-winers:hover,
+.create:hover,
+.upgrade:hover,
+.race:hover,
+.reset:hover,
+.previous:hover,
+.next:hover,
+.select:hover,
+.remove:hover {
+    background-color: aqua;
+    transition: .3s;
+}
+
+.generate-cars {
+    width: 128px;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.garage-size {
+    align-items: center;
+}
+
+.garage-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+table {
+    width: 460px;
+}
+
+th {
+    width: 80px;
+    background-color: #31fce1;
+    padding: 5px;
+    cursor: pointer;
+}
+
+td {
+    padding: 5px;
+    vertical-align: bottom;
+}
+
+.top-car-block {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.track-block {
+    display: flex;
+    height: 35px;
+    gap: 10px;
+    padding-right: 50px;
+    border-bottom: dashed 2px #fff;
+}
+
+.gas-pedal,
+.brake-pedal,
+.reset-car {
+    width: 25px;
+    height: 28px;
+    border: none;
+    cursor: pointer;
+}
+
+.gas-pedal {
+    -webkit-mask-image: url(../img/gas.png);
+    mask-image: url(../img/gas.png);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 90%;
+    mask-size: 90%;
+    mask-position: bottom;
+    -webkit-mask-position: bottom;
+}
+
+.brake-pedal {
+    -webkit-mask-image: url(../img/brake.png);
+    mask-image: url(../img/brake.png);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 75%;
+    mask-size: 75%;
+    mask-position: bottom;
+    -webkit-mask-position: bottom;
+}
+
+.reset-car {
+    -webkit-mask-image: url(../img/resetCar.png);
+    mask-image: url(../img/resetCar.png);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    mask-position: bottom;
+    -webkit-mask-position: bottom;
+}
+
+.gas-pedal:hover,
+.brake-pedal:hover,
+.reset-car:hover {
+    background-color: aquamarine;
+    transform: scale(1.05);
+    transition: .3s;
+}
+
+.car {
+    position: absolute;
+    left: 125px;
+    width: 50px;
+    height: 25px;
+    margin-top: 10px;
+    -webkit-mask-image: url(../img/car.svg);
+    mask-image: url(../img/car.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+}
+
+.car-table {
+    width: 50px;
+    -webkit-mask-image: url(../img/car.svg);
+    mask-image: url(../img/car.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+}
+
+.flag {
+    width: 30px;
+    background-image: url(../img/flag.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: auto;
+}
+
+.page-switching {
+    margin-top: 30px;
+}
+
+.drive {
+    animation: drive 2s;
+}
+
+@keyframes drive {
+    from {
+        transform: translateX(0px);
+    }
+    to {
+        transform: translateX(300px);
+    }
+}
+
+.disabled {
+    background-color: #999;
+}
+
+.upgrade.disabled:hover,
+.reset.disabled:hover,
+.race.disabled:hover,
+.to-garage.disabled:hover,
+.to-winers.disabled:hover {
+    background-color: #999;
+    cursor: unset;
+}
+
+.win-overlay {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    font-size: 1.5rem;
+    background-color: rgba(20, 50, 60, 0.5);
+}
